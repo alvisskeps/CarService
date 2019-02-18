@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+  <title>Kontakti</title>
+  <style>
+    #map{
+      height: 400px;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  	<div class="container">
+  		<a href="#" class="navbar-brand"><img src="img/logo.png" alt=""></a>
+  		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+  				<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarResponsive">
+  			<ul class="navbar-nav ml-auto">
+  				<li class="nav-item ">
+  					<a href="index.html" class="nav-link">Sākums</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="service.html" class="nav-link">Pakalpojumi</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="contact_us.php" class="nav-link">Atsauksmes</a>
+  				</li>
+  				<li class="nav-item">
+  					<a href="about.html" class="nav-link">Par mums</a>
+  				</li>
+  				<li class="nav-item active">
+  					<a href="contact.html" class="nav-link">Kontakti</a>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+  </nav>
+
+  <div class="container padding">
+  	<div class="row padding" style="background: rgba(0, 0, 0, 0.3)">
+  		<div class="col-lg-6">
+  			<h1>Kontakti</h1>
+        <br>
+  			<p>Mob. tālr.: <span style="font-weight: bold;">+371 29292929</span></p>
+        <p>Tālr.:<span style="font-weight: bold;"> +371 29202020</span></p>
+        <p>e-pasts:<span style="font-weight: bold;"> info@serviss.lv</span></p>
+        <br>
+        <p><span style="font-weight: bold;">Tērbatas iela 10</span></p>
+        <p>Valmiera, LV - 4201, Latvija</p>
+        <br>
+        <p>Darba laiks</p>
+        <p><span style="font-weight: bold;">P O T C P:</span> 09:00 - 17:00</p>
+        <p><span style="font-weight: bold;">S:</span> 10:00 - 16:00</p>
+        <p><span style="font-weight: bold;">SV. : brīvdiena</span></p>
+  		</div>
+  		<div class="col-lg-6">
+        <h1>Atrašanās vieta</h1>
+        <br>
+        <div id="map"></div>
+  		</div>
+  	</div>
+  </div>
+
+  <div class="container padding">
+  	<div class="row text-center padding">
+  		<div class="col-12 social">
+  			<a href="#"><i class="fab fa-facebook"></i></a>
+  			<a href="#"><i class="fab fa-twitter"></i></a>
+  			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+  			<a href="#"><i class="fab fa-instagram"></i></a>
+  			<a href="#"><i class="fab fa-youtube"></i></a>
+  		</div>
+  	</div>
+  </div>
+
+  <footer>
+  	<div class="container-fluid padding">
+  		<div class="row text-center">
+  			<div class="col-md-4">
+  				<img src="img/contact.png">
+  				 <p>Kontakti</p>
+  				<hr class="light">
+  				<p>+371 29292929</p>
+  				<p>+371 29202020</p>
+  				<p>info@serviss.lv</p>
+  			</div>
+  			<div class="col-md-4">
+  				<img src="img/time.png">
+  				<h5>Darba laiks</h5>
+  				<hr class="light">
+  				<p>Pirmdienas: 9:00 - 17:00</p>
+  				<p>Sestdienas: 10:00 - 16:00</p>
+  				<p>Svētdienas: Slēgts</p>
+  			</div>
+  			<div class="col-md-4">
+  				<img src="img/location.png">
+  				<h5>Atrašanās vieta</h5>
+  				<hr class="light">
+  				<p>Tērbatas iela 10</p>
+  				<p>Valmiera, LV - 4201, Latvija</p>
+  			</div>
+  			<div class="col-12">
+  				<hr class="light-100">
+  				<h5>&copy; Alvis Šķēps</h5>
+  			</div>
+  		</div>
+  	</div>
+  </footer>
+  <script>
+    function initMap(){
+      var options = {
+        zoom:13,
+        center:{lat:57.542098, lng:25.428300}
+      }
+
+      var map = new google.maps.Map(document.getElementById('map'),options);
+
+      var marker = new google.maps.Marker({
+        position:{lat: 57.542098, lng:25.428300},
+        map:map
+      })
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKCBIU_Pk1N5ZxXiSxE_u54PIB3ksPV1s&callback=initMap"></script>
+</body>
+</html>
